@@ -3,296 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoFresh - Edible Cutlery | Sustainable Dining Solutions</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        .search-bar {
-            min-width: 500px;
-        }
-        .nav-link:hover {
-            border: 1px solid white;
-        }
-        .product-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+    <title>EcoBite - Edible Cutlery</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-100 font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto flex items-center justify-between py-4 px-4">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center">
-                    <h1 class="text-2xl font-bold text-green-600">EcoFresh</h1>
-                </a>
-            </div>
-
-            <!-- Navigation -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-green-600">Home</a>
-                <a href="#" class="text-gray-700 hover:text-green-600">Products</a>
-                <a href="#" class="text-gray-700 hover:text-green-600">About</a>
-                <a href="#" class="text-gray-700 hover:text-green-600">Contact</a>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">EcoBite</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
             </nav>
-
-            <!-- Icons -->
-            <div class="flex items-center space-x-4">
-                <a href="#" class="text-gray-700 hover:text-green-600">
-                    <i data-feather="search" class="w-5 h-5"></i>
-                </a>
-                <a href="#" class="text-gray-700 hover:text-green-600">
-                    <i data-feather="user" class="w-5 h-5"></i>
-                </a>
-                <a href="#" class="text-gray-700 hover:text-green-600 relative">
-                    <i data-feather="shopping-cart" class="w-5 h-5"></i>
-                    <span class="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                </a>
-            </div>
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <div class="relative bg-[#EAEDED]">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex flex-col md:flex-row">
-                <!-- Categories Sidebar -->
-                <div class="hidden md:block w-64 bg-white mr-4 p-4 rounded shadow">
-                    <h3 class="font-bold text-lg mb-4">Shop by Category</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">All Edible Cutlery</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Spoons</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Forks</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Knives</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Combo Packs</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Straws</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Plates</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Bulk Orders</a></li>
-                        <li><a href="#" class="text-sm hover:text-[#C7511F]">Custom Printed</a></li>
-                    </ul>
+    <section class="hero">
+        <div class="container">
+            <h2>Sustainable Dining, One Bite at a Time</h2>
+            <p>Delicious, nutritious, and eco-friendly edible cutlery</p>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/spoon.jpg" alt="Edible Spoon">
+                    <h3>Edible Spoon</h3>
+                    <p>Made with whole grains and natural flavors</p>
+                    <p class="price">$0.25 per unit</p>
+                    <a href="products/spoon.html" class="btn">Add to Cart</a>
                 </div>
 
-                <!-- Main Content -->
-                <div class="flex-1">
-                    <!-- Hero Carousel -->
-                    <div class="bg-white p-4 rounded shadow mb-4">
-                        <img src="http://static.photos/food/1024x576/1" alt="EcoFresh Edible Cutlery" class="w-full h-64 object-cover rounded">
-                        <div class="mt-4 text-center">
-                            <h2 class="text-2xl font-bold">Sustainable Dining Starts Here</h2>
-                            <p class="text-gray-600 mt-2">Try our delicious, eco-friendly edible cutlery today!</p>
-                            <button class="bg-[#FFD814] hover:bg-[#F7CA00] text-black font-bold py-2 px-6 rounded-full mt-4">
-                                Shop Now
-                            </button>
-                        </div>
-                    </div>
+                <div class="product-card">
+                    <img src="images/fork.jpg" alt="Edible Fork">
+                    <h3>Edible Fork</h3>
+                    <p>Perfect for salads and main courses</p>
+                    <p class="price">$0.25 per unit</p>
+                    <a href="products/fork.html" class="btn">Add to Cart</a>
+                </div>
 
-                    <!-- Deals of the Day -->
-                    <div class="bg-white p-4 rounded shadow mb-4">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="font-bold text-xl">Today's Deals</h3>
-                            <a href="#" class="text-[#007185] text-sm hover:underline">See all deals</a>
-                        </div>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <!-- Deal Item 1 -->
-                            <div class="product-card bg-white p-3 rounded border border-gray-200 transition-all duration-300">
-                                <div class="bg-[#CC0C39] text-white text-xs px-2 py-1 rounded inline-block mb-2">32% off</div>
-                                <img src="http://static.photos/food/320x240/1" alt="Edible Spoon" class="w-full h-32 object-contain">
-                                <div class="mt-2">
-                                    <div class="text-[#CC0C39] text-sm font-bold">₹199</div>
-                                    <div class="text-gray-500 text-xs line-through">₹290</div>
-                                    <div class="text-xs text-gray-600 mt-1">EcoFresh Edible Spoons (Pack of 50)</div>
-                                </div>
-                            </div>
-                            <!-- Deal Item 2 -->
-                            <div class="product-card bg-white p-3 rounded border border-gray-200 transition-all duration-300">
-                                <div class="bg-[#CC0C39] text-white text-xs px-2 py-1 rounded inline-block mb-2">25% off</div>
-                                <img src="http://static.photos/food/320x240/2" alt="Edible Fork" class="w-full h-32 object-contain">
-                                <div class="mt-2">
-                                    <div class="text-[#CC0C39] text-sm font-bold">₹229</div>
-                                    <div class="text-gray-500 text-xs line-through">₹305</div>
-                                    <div class="text-xs text-gray-600 mt-1">EcoFresh Edible Forks (Pack of 50)</div>
-                                </div>
-                            </div>
-                            <!-- Deal Item 3 -->
-                            <div class="product-card bg-white p-3 rounded border border-gray-200 transition-all duration-300">
-                                <div class="bg-[#CC0C39] text-white text-xs px-2 py-1 rounded inline-block mb-2">40% off</div>
-                                <img src="http://static.photos/food/320x240/3" alt="Combo Pack" class="w-full h-32 object-contain">
-                                <div class="mt-2">
-                                    <div class="text-[#CC0C39] text-sm font-bold">₹349</div>
-                                    <div class="text-gray-500 text-xs line-through">₹580</div>
-                                    <div class="text-xs text-gray-600 mt-1">EcoFresh Combo Pack (25 Spoons + 25 Forks)</div>
-                                </div>
-                            </div>
-                            <!-- Deal Item 4 -->
-                            <div class="product-card bg-white p-3 rounded border border-gray-200 transition-all duration-300">
-                                <div class="bg-[#CC0C39] text-white text-xs px-2 py-1 rounded inline-block mb-2">15% off</div>
-                                <img src="http://static.photos/food/320x240/4" alt="Edible Straws" class="w-full h-32 object-contain">
-                                <div class="mt-2">
-                                    <div class="text-[#CC0C39] text-sm font-bold">₹169</div>
-                                    <div class="text-gray-500 text-xs line-through">₹199</div>
-                                    <div class="text-xs text-gray-600 mt-1">EcoFresh Edible Straws (Pack of 100)</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="product-card">
+                    <img src="images/knife.jpg" alt="Edible Knife">
+                    <h3>Edible Knife</h3>
+                    <p>Surprisingly sturdy for soft foods</p>
+                    <p class="price">$0.30 per unit</p>
+                    <a href="products/knife.html" class="btn">Add to Cart</a>
+                </div>
 
-                    <!-- Featured Products -->
-                    <div class="bg-white p-4 rounded shadow mb-4">
-                        <h3 class="font-bold text-xl mb-4">Featured Products</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <!-- Product 1 -->
-                            <div class="product-card bg-white p-3 rounded border border-gray-200 transition-all duration-300">
-                                <img src="http://static.photos/food/320x240/5" alt="Edible Spoon" class="w-full h-48 object-contain">
-                                <div class="mt-2">
-                                    <div class="text-sm text-gray-600">EcoFresh</div>
-                                    <div class="text-md font-bold line-clamp-2">Premium Edible Spoons - Wheat Based (Pack of 100)</div>
-                                    <div class="flex items-center mt-1">
-                                        <div class="flex text-yellow-400">
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current text-gray-300"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-1">(1,234)</span>
-                                    </div>
-                                    <div class="mt-1">
-                                        <span class="text-lg font-bold">₹399</span>
-                                        <span class="text-sm text-gray-500 line-through ml-1">₹499</span>
-                                    </div>
-                                    <div class="text-xs text-green-600">Get it by Tomorrow</div>
-                                    <div class="text-xs text-gray-500 mt-1">FREE Delivery</div>
-                                </div>
-                            </div>
-                            <!-- Product 2 -->
-                            <div class="product-card bg-white p-3 rounded border border-gray-200 transition-all duration-300">
-                                <img src="http://static.photos/food/320x240/6" alt="Edible Fork" class="w-full h-48 object-contain">
-                                <div class="mt-2">
-                                    <div class="text-sm text-gray-600">EcoFresh</div>
-                                    <div class="text-md font-bold line-clamp-2">Premium Edible Forks - Multigrain (Pack of 100)</div>
-                                    <div class="flex items-center mt-1">
-                                        <div class="flex text-yellow-400">
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-1">(2,543)</span>
-                                    </div>
-                                    <div class="mt-1">
-                                        <span class="text-lg font-bold">₹449</span>
-                                        <span class="text-sm text-gray-500 line-through ml-1">₹549</span>
-                                    </div>
-                                    <div class="text-xs text-green-600">Get it by Tomorrow</div>
-                                    <div class="text-xs text-gray-500 mt-1">FREE Delivery</div>
-                                </div>
-                            </div>
-                            <!-- Product 3 -->
-                            <div class="product-card bg-white p-3 rounded border border-gray-200 transition-all duration-300">
-                                <img src="http://static.photos/food/320x240/7" alt="Combo Pack" class="w-full h-48 object-contain">
-                                <div class="mt-2">
-                                    <div class="text-sm text-gray-600">EcoFresh</div>
-                                    <div class="text-md font-bold line-clamp-2">Ultimate Eco Pack (50 Spoons + 50 Forks + 100 Straws)</div>
-                                    <div class="flex items-center mt-1">
-                                        <div class="flex text-yellow-400">
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                                            <i data-feather="star" class="w-4 h-4 fill-current text-gray-300"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 ml-1">(987)</span>
-                                    </div>
-                                    <div class="mt-1">
-                                        <span class="text-lg font-bold">₹899</span>
-                                        <span class="text-sm text-gray-500 line-through ml-1">₹1,199</span>
-                                    </div>
-                                    <div class="text-xs text-green-600">Get it by Tomorrow</div>
-                                    <div class="text-xs text-gray-500 mt-1">FREE Delivery</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="product-card">
+                    <img src="images/spork.jpg" alt="Edible Spork">
+                    <h3>Edible Spork</h3>
+                    <p>The versatile spoon-fork hybrid</p>
+                    <p class="price">$0.35 per unit</p>
+                    <a href="products/spork.html" class="btn">Add to Cart</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#131A22] text-white">
-        <div class="container mx-auto px-4 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Column 1 -->
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Get to Know Us</h4>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="#" class="hover:underline">About Us</a></li>
-                        <li><a href="#" class="hover:underline">Careers</a></li>
-                        <li><a href="#" class="hover:underline">Press Releases</a></li>
-                        <li><a href="#" class="hover:underline">EcoFresh Science</a></li>
-                    </ul>
+    <section class="about">
+        <div class="container">
+            <h2>Why Choose EcoBite?</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Eco-Friendly</h3>
+                    <p>Reduce plastic waste with our biodegradable cutlery</p>
                 </div>
-                <!-- Column 2 -->
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Make Money with Us</h4>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="#" class="hover:underline">Sell products on EcoFresh</a></li>
-                        <li><a href="#" class="hover:underline">Become an Affiliate</a></li>
-                        <li><a href="#" class="hover:underline">Advertise Your Products</a></li>
-                        <li><a href="#" class="hover:underline">Host an Eco Event</a></li>
-                    </ul>
+                <div class="feature">
+                    <h3>Nutritious</h3>
+                    <p>Made with wholesome ingredients you can feel good about</p>
                 </div>
-                <!-- Column 3 -->
-                <div>
-                    <h4 class="font-bold text-lg mb-4">EcoFresh Payment Products</h4>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="#" class="hover:underline">EcoFresh Business Card</a></li>
-                        <li><a href="#" class="hover:underline">Shop with Points</a></li>
-                        <li><a href="#" class="hover:underline">Reload Your Balance</a></li>
-                        <li><a href="#" class="hover:underline">Currency Converter</a></li>
-                    </ul>
-                </div>
-                <!-- Column 4 -->
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Let Us Help You</h4>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="#" class="hover:underline">Your Account</a></li>
-                        <li><a href="#" class="hover:underline">Your Orders</a></li>
-                        <li><a href="#" class="hover:underline">Shipping Rates & Policies</a></li>
-                        <li><a href="#" class="hover:underline">Returns & Replacements</a></li>
-                        <li><a href="#" class="hover:underline">Help</a></li>
-                    </ul>
+                <div class="feature">
+                    <h3>Delicious</h3>
+                    <p>Available in multiple flavors: original, wheat, and herb</p>
                 </div>
             </div>
-            <div class="border-t border-gray-600 mt-8 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="flex items-center mb-4 md:mb-0">
-                        <img src="http://static.photos/minimal/320x240/1" alt="EcoFresh Logo" class="h-8 mr-2">
-                        <span class="text-sm">© 2023 EcoFresh Edible Cutlery</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-sm hover:underline">Conditions of Use</a>
-                        <a href="#" class="text-sm hover:underline">Privacy Notice</a>
-                        <a href="#" class="text-sm hover:underline">Interest-Based Ads</a>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 EcoBite Edible Cutlery. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        AOS.init();
-        feather.replace();
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
